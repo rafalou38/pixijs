@@ -1,3 +1,21 @@
+> This fork contains pre compiled pixi.js package without exports in package.json, I made it to use pixi.js with sveltekit
+
+usage:
+```ts
+// use this
+import * as PIXI from 'pixi.js/dist/cjs/pixi.js';
+// and not this
+import * as PIXI from 'pixi.js';
+```
+types:
+```ts
+// app.d.ts
+declare module 'pixi.js/dist/cjs/pixi.js' {
+	export * from 'pixi.js';
+}
+```
+
+
 PixiJS — The HTML5 Creation Engine
 =============
 
